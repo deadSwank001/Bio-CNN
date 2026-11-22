@@ -1,3 +1,9 @@
+# Bio-CNN
+
+Explore sample quality measurements and supplied model scores in the
+[sample explorer dashboard](dashboard/README.md). The dashboard uses demo or
+user-supplied data; it does not run a trained CNN and is not for clinical use.
+
 1. In a CNN workflow for genomics, we often treat DNA sequences or pileup images as "images." The final layer usually gives us a probability map or a heatmap of where variants (SNPs/Indels) are likely located.
 
 2. To quantify DNA/Protein concentration from band intensity, we use Linear Regression. This maps the "Pixel Intensity" (feature) to a "Concentration" (target).
