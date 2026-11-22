@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bio-CNN | Sample explorer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">BIO-CNN / EXPLORATORY DASHBOARD</p>
+      <h1>See your samples clearly.</h1>
+      <p>Explore sample quality metrics and supplied model scores in your browser.</p>
+      <p class="notice"><strong>Research only.</strong> This tool does not run a CNN, validate genomic variants, or make clinical decisions. Clusters are unlabeled groupings, not quality classifications.</p>
+    </header>
+    <section class="controls">
+      <label>Load CSV <input id="file" type="file" accept=".csv,text/csv"></label>
+      <button id="demo" type="button">Load demo data</button>
+      <label>Clusters <select id="clusters"><option>2</option><option selected>3</option><option>4</option></select></label>
+      <p>Required columns: <code>sample,band_sharpness,a260_a280</code>. Optional: <code>variant_probability</code>. Files stay in your browser.</p>
+      <p id="status" role="status" aria-live="polite"></p>
+    </section>
+    <section class="panel">
+      <h2>Quality metrics</h2>
+      <p>Band sharpness vs. A260/A280 ratio; colors group standardized measurements using k-means.</p>
+      <svg id="plot" viewBox="0 0 760 420" role="img" aria-label="Scatter plot of sample quality metrics"></svg>
+      <p id="legend"></p>
+    </section>
+    <section class="panel">
+      <h2>Samples and supplied scores</h2>
+      <p>Variant probabilities are supplied in the CSV; they are not generated or validated by this dashboard.</p>
+      <div class="table-wrap"><table><thead><tr><th>Sample</th><th>Sharpness</th><th>A260/A280</th><th>Cluster</th><th>Variant probability</th></tr></thead><tbody id="rows"></tbody></table></div>
+    </section>
+  </main>
+  <script src="analysis.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

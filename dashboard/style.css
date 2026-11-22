@@ -1,0 +1,10 @@
+:root { color-scheme: dark; font-family: system-ui, sans-serif; background: #0a1322; color: #eaf2ff; }
+body { margin: 0; } main { max-width: 1050px; margin: auto; padding: 3rem 1.25rem; }
+h1 { font-size: clamp(2.4rem, 6vw, 4.5rem); margin: .4rem 0; letter-spacing: -.04em; }
+h2 { margin-top: 0; } p { line-height: 1.55; color: #bdcbe0; } .eyebrow { color: #7de1ca; letter-spacing: .14em; font-size: .75rem; font-weight: bold; }
+.notice, .controls, .panel { border: 1px solid #293d58; background: #101f33; border-radius: 14px; padding: 1.3rem; margin: 1.2rem 0; }
+.notice { border-left: 4px solid #ffc981; } .controls label { display: inline-block; margin: .5rem 1.5rem .5rem 0; }
+button, select, input { font: inherit; } button, select { background: #1b3853; color: white; border: 1px solid #57728d; border-radius: 7px; padding: .5rem .8rem; cursor: pointer; }
+svg { width: 100%; background: #0b1828; border-radius: 8px; } .table-wrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; } th, td { padding: .7rem; text-align: left; border-bottom: 1px solid #293d58; }
+th { color: #97acc7; } #status { color: #7de1ca; } code { color: #a6e9d8; }
